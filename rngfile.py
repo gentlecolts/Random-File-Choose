@@ -35,7 +35,7 @@ else:
 	
 	files=random.choice(dirs)
 
-	pprint(dirs)
+	#pprint(dirs)
 
 #pprint(files)
 
