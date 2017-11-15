@@ -22,10 +22,8 @@ if args.n:
 else:
 	dirs=[]
 	for path in args.dirs:
-		dirs+=tuple(os.walk(path))
+		dirs+=[x for x in os.walk(path) if x and len(x[2])]
 
-	dirs=[x for x in dirs if x and len(x[2])]
-	
 	if args.f:
 		f=[]
 		for d in dirs:
